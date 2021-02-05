@@ -1,16 +1,20 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-require("dotenv").config();
 const app = express();
+require("dotenv").config();
 app.use(cors());
+const passport = require("passport");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(passport.initialize());
 
 //! connect to databse
 const { connectMongo } = require("./controllers/connect_db");
 connectMongo();
+
+require("./controllers/auth")(passport);
 
 app.get("/api", (req, res) => {
   res.json({ msg: "test" });
