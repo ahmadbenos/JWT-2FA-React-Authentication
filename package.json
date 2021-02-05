@@ -15,6 +15,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-mongo": "^3.2.0",
+    "cors": "^2.8.5",
     "dayjs": "^1.10.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -22,6 +23,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.14",
     "passport": "^0.4.1",
+    "react-loader-spinner": "^4.0.0",
     "react-router-dom": "^5.2.0",
     "speakeasy": "^2.0.0",
     "uuid": "^8.3.2"
