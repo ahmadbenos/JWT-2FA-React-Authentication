@@ -12,7 +12,7 @@ exports.loginUser = (req, res, next) => {
     jwt.sign(
       { id: user.id, email: user.email },
       "secret",
-      { expiresIn: "180s" },
+      { expiresIn: "60s" },
       (err, token) => {
         if (err) {
           console.log(err);

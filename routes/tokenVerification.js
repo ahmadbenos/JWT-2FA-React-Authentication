@@ -16,7 +16,7 @@ router.post("/", (req, res) => {
         });
       }
       console.log(authInfo);
-      res.json({ message: "access granted", status: "success" });
+      res.json({ message: authInfo, status: "success" });
     });
   } else {
     res.json({
