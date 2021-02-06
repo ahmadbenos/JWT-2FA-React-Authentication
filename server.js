@@ -22,6 +22,7 @@ app.get("/api", (req, res) => {
 
 app.use("/api/register", require("./routes/register"));
 app.use("/api/login", require("./routes/login"));
+app.use("/api/token", require("./routes/tokenVerification"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
