@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-
+/*THIS IS JUST A SAMPLE ON HOW TO COMPLETELY VERIFY A JWT NOT JUST BASED ON EXPIRY DATE
+SO THIS IS NOT USED IN THIS APPLICATION, JUST WROTE THIS TO SHOW HOW VERIFICATION
+OF THE TOKEN WORKS!
+*/
 router.post("/", (req, res) => {
   const bearer = req.headers["authorization"];
   if (bearer !== undefined) {

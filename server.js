@@ -22,6 +22,8 @@ app.get("/api", (req, res) => {
 
 app.use("/api/register", require("./routes/register"));
 app.use("/api/login", require("./routes/login"));
+app.use("/api/2fa", require("./routes/2fa"));
+// THIS ROUTE IS NOT USED IN THE APP, JUST A SAMPLE JWT VERIFICATION
 app.use("/api/token", require("./routes/tokenVerification"));
 
 const PORT = process.env.PORT || 5000;
