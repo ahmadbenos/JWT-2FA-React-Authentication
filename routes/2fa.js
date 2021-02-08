@@ -3,7 +3,7 @@ const router = express.Router();
 const speakeasy = require("speakeasy");
 const User = require("../Models/User");
 
-router.post("/activate", (req, res) => {
+router.get("/activate", (req, res) => {
   try {
     const newSecret = speakeasy.generateSecret();
     res.json({ tempSecret: newSecret.base32, status: "success" });
