@@ -9,6 +9,10 @@ const Header = () => {
           This is a mini project that uses JWT(route protection) and 2FA(more
           account security)
         </small>
+   <p>by Ahmad Tarabein</p>
+        <a href="https://github.com/ahmadbenos/JWT-2FA-React-Authentication">
+          Github repo link
+        </a>
       </div>
     </>
   );
