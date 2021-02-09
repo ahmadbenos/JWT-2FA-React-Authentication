@@ -10,7 +10,7 @@ exports.loginUser = (req, res, next) => {
       return res.json({ message: info.message, status: "error" });
     }
     jwt.sign(
-      { id: user.id, email: user.email },
+      { id: user.id, email: user.email, two_fa_Validated: false },
       "secret",
       { expiresIn: "60s" },
       (err, token) => {

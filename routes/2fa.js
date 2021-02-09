@@ -33,6 +33,26 @@ router.post("/verify", (req, res) => {
           res.json({ verified: true, status: "success" });
         })
         .catch((err) => console.log(err));
+    } else {
+      res.json({ verified: false, status: "error" });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.post("/validate", (req, res) => {
+  const { secret, token } = req.body;
+  try {
+    const isValidated = speakeasy.totp.verify({
+      secret,
+      encoding: "base32",
+      token,
+    });
+    if (isValidated) {
+      res.json({ verified: true, status: "success" });
+    } else {
+      res.json({ verified: false, status: "error" });
     }
   } catch (err) {
     console.log(err);
