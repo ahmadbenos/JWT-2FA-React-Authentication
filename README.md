@@ -1,5 +1,6 @@
 ## Live Demo
-test the project on: [https://ahmadbenos-jwt-2fa.glitch.me/](https://ahmadbenos-jwt-2fa.glitch.me/) 
+test the project on: [https://ahmadbenos-jwt-2fa.glitch.me/](https://ahmadbenos-jwt-2fa.glitch.me/)  
+or clone the project and run `npm install` then `npm run server`
 
 Note: (glitch.com app load times sometimes takes about 2-3 mins)
 
